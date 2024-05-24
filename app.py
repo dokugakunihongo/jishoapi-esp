@@ -2,9 +2,11 @@ from flask import Flask
 #from flask_cors import CORS 
 from db.utils import *
 
-app = Flask(__name__)
-#CORS(app)
 
+#CORS(app)
+def crear_app():
+    app = Flask(__name__)
+    
 @app.route("/search/<query>")
 def search_in_db(query):
     return Search(query)
