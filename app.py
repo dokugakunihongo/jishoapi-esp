@@ -11,6 +11,7 @@ def crear_app():
     def search_in_db(query):
         return Search(query)
 
-
+    return app
 if __name__ == "__main__":
+    app = crear_app()
     app.run()
