@@ -7,6 +7,10 @@ from db.utils import *
 def crear_app():
     app = Flask(__name__)
     
-@app.route("/search/<query>")
-def search_in_db(query):
-    return Search(query)
+    @app.route("/search/<query>")
+    def search_in_db(query):
+        return Search(query)
+
+
+if __name__ == "__main__":
+    app.run()
